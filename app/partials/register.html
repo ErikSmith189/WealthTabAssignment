@@ -1,0 +1,17 @@
+<link href="css/register.css" rel="stylesheet">
+<div class="registration-form">
+	<h1>Register</h1>
+	<div>
+		<input type="text" class="text" name="name" ng-model="name" placeholder="Name"></input>
+		<input type="password" name="password" ng-model="password" placeholder="Password"></input>
+		<div class="submit">
+			<button type = "button" ng-click="registerAction(name,password)" class = "btn btn-success">Register</button>
+		</div>
+		<div ng-if='error!==undefined'>
+			<div class="alert alert-danger">
+				{{ error }}
+			</div>
+		</div>
+		<p><a href="#/login" >Already have an account.</a></p>
+	</div>
+</div>

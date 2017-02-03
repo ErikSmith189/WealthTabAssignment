@@ -1,0 +1,20 @@
+<div class="alert alert-danger" ng-if='errorMessage!==undefined'>
+	{{ errorMessage }}
+</div>
+<div ng-if='successMessage!==undefined'>
+	<div class="alert alert-success">
+		{{ successMessage }}
+	</div>
+</div>
+<h1>List of all registered products:</h1>
+<hr>
+<br>
+<div class="list-group" ng-repeat="products in productsList" id="{{ products._id }}">
+	<a class="list-group-item list-group-item-action ">
+		<div class="d-flex w-100 justify-content-between">
+			<h5 class="mb-1"><strong>{{products.name}}</strong></h5>
+		</div>
+		<p class="mb-1">{{products.description}}</p>
+	</a>
+	<button type ="button" class = "btn btn-danger" ng-click="deleteProductAction(products._id)">Delete</button>
+</div>

@@ -1,0 +1,19 @@
+<form>
+	<div class="form-group">
+		<label for="formGroupExampleInput">Product name</label><br>
+		<input type="text" class="form-control" ng-model="name"  placeholder="Name">
+		<small>*Not unique</small>
+	</div>
+	<div class="form-group">
+		<label for="formGroupExampleInput2">Product Description</label><br>
+		<textarea class="form-control" id="exampleTextarea"  name="description" ng-model="description" placeholder="description" rows="3"></textarea>
+	</div>
+	<div class="submit">
+		<button type = "button" ng-click="newProductAction(name,description)" class = "btn btn-success">submit</button>
+	</div>
+	<div ng-if='error!==undefined'>
+		<div class="alert alert-danger">
+			{{ error }}
+		</div>
+	</div>
+</form>
